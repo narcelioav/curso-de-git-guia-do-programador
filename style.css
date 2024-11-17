@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    width: 70%;
+    /* Reduz a largura do conteúdo principal para 70% */
+    margin-left: auto;
+    /* Centraliza o conteúdo */
+    margin-right: auto;
+    /* Centraliza o conteúdo */
+    align-self:
+}
+
+/* Caixa - Contém todo o conteúdo */
+.caixa {
+    display: flex;
+    flex-direction: row;
+    /* Posiciona o menu lateral e o conteúdo lado a lado */
+    max-width: 768px;
+    /* Define uma largura máxima para o conteúdo */
+    margin: 0 auto;
+    /* Centraliza a caixa horizontalmente */
+    height: 100vh;
+    /* Garante que a caixa ocupe 100% da altura da tela */
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 85%;
+    /* O conteúdo ocupa o espaço restante */
+    background-color: #fff;
+    /* Define um fundo branco para destacar o conteúdo */
+    border-radius: 10px;
+    /* Bordas arredondadas para dar um aspecto elegante */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+}
+
+/* Menu Topo */
+.menu-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-bottom: 2px solid #bdc3c7;
+
+}
+
+.menu-topo .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    cursor: pointer;
+}
+
+.menu-topo .busca input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    outline: none;
+}
+
+.menu-topo .busca input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Remove o sublinhado dos links */
+.menu-topo .login a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2c3e50;
+    background-color: #3498db;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+}
+
+/* Mantém o sublinhado removido ao passar o mouse sobre os links */
+.menu-topo .login a:hover {
+    text-decoration: none;
+    background-color: #2980b9;
+    cursor: pointer;
+}
+
+/* Títulos e Recomendados */
+.recomendados {
+    /*Margin é o rspaço externo da div
+        Pedding é o espaço interno*/
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.recomendados h4 {
+    font-size: 15px;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+.conteudo {
+    background-color: chocolate;
+    display: flex;
+    /*Apresentar as div's em linha*/
+    flex-wrap: wrap;
+    /*Limitar as div's dentro da div conteudo, quebra a linha da div*/
+}
+
+.conteudo a {
+    text-decoration: none;
+}
+
+.videos-recomendados {
+    /*
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    */
+    width: 35%;
+    background-color: #ecf0f1;
+    padding: 10px;
+    /*espaço na laterais*/
+    /*border-radius: 10px;*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /*O espaço entre as box*/
+    margin-bottom: 0px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+/*
+.videos-recomendados:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+*/
+.videos-recomendados img {
+    width: 100%;
+    height: auto;
+    /*border-radius: 10px;*/
+}
+
+.principal {
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 15px 0 5px;
+    font-size: 11px;
+    text-align: left;
+    /* Alinha o texto principal à esquerda */
+    text-decoration: none;
+}
+
+.secundario {
+    font-size: 8px;
+    color: #7f8c8d;
+    text-align: left;
+    /* Alinha o texto secundário à esquerda */
+    text-decoration: none;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .videos-recomendados {
+        width: 48%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        /* Aumenta a largura em telas menores */
+        margin-left: 5px;
+        /* Ajusta para corresponder à largura reduzida do menu lateral em telas pequenas */
+    }
+
+    .menu-lateral {
+        width: 100px;
+    }
+
+    .menu-topo .busca input {
+        width: 200px;
+    }
+
+    .videos-recomendados {
+        width: 50%;
+    }
+}

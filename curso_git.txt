@@ -1,0 +1,151 @@
+o que é Github - é um serviço que serve para armasenar repositorios git.
+
+outros serviços de armazenagem de repositorios git é:
+GitLab / BitBucket / e um servidor proprio (no servidor vpn da hostinger)
+
+na instalação de git, no site git.scm.com
+na instação escolha o notepad como editor padrão
+
+Para uso do git pode ser usado o: cmd ou git bash
+
+cmd: git --version //mostra a versao do git
+
+no cmd
+
+digite cd e o caminho da pasta
+
+
+
+git init - iniciando o git
+
+cls - limpa o cmd
+
+git status - mostra a condição dos arquivos na pasta
+
+git add "file" - sobe o arquivo para o git
+
+git add . - sobe todos os arquivos para o git
+
+git config --global user.name "nome" - define o usuario
+
+git config --global user.email "email" - define o usuario
+
+git commit -m "mensagem" - comentar o arquivo
+senpre antes do commit use o add .
+
+git log - mostra o historico de commits
+
+============Retornar para versao anterior de commit
+git checkout "6 primeiros mumeros do codigo do commit"
+antes de realizar execute git add . e giy commit
+
+git checkout master - retorna para a ultima versao
+
+ou "main" caso temham mudado a nomenclatura master
+
+============Trabalhar com Branch
+
+git branch "nome da pagina" cria um branch
+mas permanece no branch principal
+
+git checkout "nome da pagina" muda para a pagina "nome da pagina" 
+
+git commit -m "mensagem" - comentar o arquivo na branch
+
+============= Renomear branch
+voce tem que esta na branch que vai mudar
+git branch -m "novo nome" - não mudar nome de repositorio antigos, so novos, para não quebrar o fluxo de deploy
+
+novo padrao de nomenclatura do git "main"
+
+============= Merge
+
+dentro da branch principal, execute o merge
+git merge "nome da branch nova" 
+
+============= Crie um repositorio no Github
+
+Enviando os arquivos para o Github
+
+git remote add origin "url" .git
+git push -u origin main
+
+============== clone
+
+para baixar um repositorio do Github
+
+git clone "url" .git
+
+=============== Subindo comits para o github
+
+git push origin "nome da branch"
+
+=============== fazendo o merge do github para o main
+
+git merge "file"
+
+para atualiza o merge
+git push origin main
+
+================ Atualizar o git atraves do github
+
+Serve para atualizar pastas locais atraves do github, (com trabalho em equipe, sempre atualizar antes de iniciar o trabalho)
+
+git pull origin
+
+================ Resolvendo conflito
+
+quando dois operadores trabalharem no mesmo arquivo, havera conflito. sempre antes de executar o push, aplique o pull
+
+=============== Regra de revisâo de merge
+
+É uma configuração realizada no github, seguindo os passos:
+Setting;
+branchs;
+Add branch protection rule;
+Require a pull request before merging;
+Require approvals: selecione o numero de aprovações;
+Branch name pattern: recomendado que use *;
+e finalizar em create;
+
+Ao enviar uma branch para o servidor, clic em "pull requests"
+New pull request:
+
+selecione a nova branch
+main <- nova branch
+
+create pull request
+descrição do PR;
+comentario do PR;
+create pull request;
+Confirm.
+
+================ Fork
+
+cria uma copia de todo o historico de um projeto do github na minha conta.
+
+================ Ignorar arquivos e pastas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
